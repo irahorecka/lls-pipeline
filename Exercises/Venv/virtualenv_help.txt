@@ -1,0 +1,5 @@
+HOW TO ADD VENV KERNEL TO JUPYTER ENV
+https://stackoverflow.com/questions/33496350/execute-python-script-within-jupyter-notebook-using-a-specific-virtualenv
+
+HOW TO REMOVE VENV KERNEL FROM JUPYTER ENV
+https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook

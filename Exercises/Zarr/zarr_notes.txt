@@ -1,0 +1,9 @@
+HOW TO PIP INSTALL numcodecs WITHOUT WHEEL BUILD FAIL
+
+$ pip install numcodecs==0.6.3
+$ pip install numcodecs==0.6.3 zarr
+
+NOTES:
+	This problem is particular to OSX and Windows.
+
+
