@@ -1,2 +1,10 @@
 # LLS_Pipeline
-A repository to assist in real-time LLS microscopy image processing.
+## Introduction
+A pipeline to process LLS microscopy images as they are exported from a lattice light-sheet microscope.
+
+## Libraries of interest
+- ```napari```
+- ```dask-image```
+- ```zarr```
+- ```pycudadeconv```
+
