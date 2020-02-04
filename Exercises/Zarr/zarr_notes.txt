@@ -15,6 +15,9 @@ INSTALLING GCC AND CLANG COMPILERS ON WINDOWS:
 		$ g++-9.2.0 --std=c++14 {}.cpp
 		$ ./a.exe
 
+	CUDA Toolkit has its own CUDA cpp compiler (nvcc)
+		unsure if this is strictly for GPU or CPU/GPU compatible
+
 
 ARTICLES DISCUSSING TIFF TO ZARR
 1) Converting Whole Slide Images to OME-TIFF: A New Workflow

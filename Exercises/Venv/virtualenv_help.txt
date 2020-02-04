@@ -16,5 +16,8 @@ $ pip --no-cache-dir install {}
 
 CALL VIRTUALENVIRONMENT IN WINDOWS 10 (USE COMMAND PROMPT, NOT POWERSHELL)
 https://conda.io/projects/conda/en/latest/user-guide/troubleshooting.html#path-error
+FOR PYTHON VENV
+$ workon venv (e.g. napari)
+FOR ANACONDA VENV
 $ set “PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\”
-$ call C:\Users\Viz2\Anaconda3\Scripts\activate venv
+$ call C:\Users\Viz2\Anaconda3\Scripts\activate venv (e.g. napari_llspy)
