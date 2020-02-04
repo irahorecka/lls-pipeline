@@ -1,0 +1,38 @@
+HOW TO INSTALL CUDA TOOLKIT (v10.1 (required for cupy) or 10.2) AND USE CUDA FOR PYTHON APPLICATIONS (for Windows)
+https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html
+
+check that you have CUDA-capable GPU
+	Viz2 UCB ABC -- NVIDIA Quadro GV100
+download appropriate CUDA Toolkit for your OS (Windows 10)
+	follow prompt - choose Express download
+try sample code provided by NVIDIA
+	if build fails, look at error message:
+		e.g. Windows SDK registry variable not found
+		in this case, you must install SDK via the VSCode program on your computer (look @ kalmiya's response)
+		https://stackoverflow.com/questions/22188919/windows-sdk-registry-variable-not-found
+	it should work after this. test sample code and look @ GPU usage on task manager to verify
+		in case you receive an empty directory error, look into this... (access sample folder properties via VSCode)
+		https://devtalk.nvidia.com/default/topic/1042441/cuda-setup-and-installation/the-cuda-toolkit-v10-0-directory-does-not-exist-/
+		use this path in the CUDA Toolkit Custom Dir: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2
+	NOTE: THE ABOVE EXAMPLE FAILED FOR CUDA TOOLKIT V10.2
+	      UNINSTALL V10.2 AND INSTALL 10.1
+	
+WORKING WITH CUPY WITH CUDA TOOLKIT V10.1
+	Install appropriate CUDA Toolkit V10.1
+	Restart computer
+	Open command prompt (Windows 10) and if you are working with a virtualenv + anaconda virtualenv:
+		$ workon venv_py
+		$ set path=""
+		$ call path venv_anaconda3
+	$ pip install cupy
+		if you get: error: Microsoft Visual C++ 14.1 is required. Get it with "Build Tools for Visual Studio": https://visualstudio.microsoft.com/downloads/
+		visit this link and download cpp build tools: https://www.scivision.co/python-windows-visual-c-14-required/
+			FOLLOW THE INSTRUCTIONS CAREFULLY...
+	if you are STILL receiving cpp 14.1 error, try this instead
+	$ pip install cupy-cuda101 (if you have CUDA toolkit 10.1)
+		this should work
+	Open python repl and type:
+		>>>import cupy
+	this should work!
+
+
