@@ -5,5 +5,29 @@ $ pip install numcodecs==0.6.3 zarr
 
 NOTES:
 	This problem is particular to OSX and Windows.
+	With windows, you must install GCC compiler to access C extensions from sources, which includes the numcodecs.blosc module
+
+
+INSTALLING GCC AND CLANG COMPILERS ON WINDOWS:
+	https://preshing.com/20141108/how-to-install-the-latest-gcc-on-windows/
+	2020-02-03: install gcc-9.2.0.tar.gz (released Nov 2019)
+	after installation, compile cpp code like this:
+		$ g++-9.2.0 --std=c++14 {}.cpp
+		$ ./a.exe
+
+
+ARTICLES DISCUSSING TIFF TO ZARR
+1) Converting Whole Slide Images to OME-TIFF: A New Workflow
+	https://www.glencoesoftware.com/blog/2019/12/09/converting-whole-slide-images-to-OME-TIFF.html
+2) Implement ImageStack zarr saving and loading
+	https://github.com/spacetx/starfish/issues/419
+3) save napari to zarr file 
+	https://github.com/napari/napari/issues/490
+4!!) Load Large Image Data with Dask Array
+	https://blog.dask.org/2019/06/20/load-image-data
+
+
+
+
 
 

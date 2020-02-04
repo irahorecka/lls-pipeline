@@ -1,5 +1,20 @@
+INTRODUCTION:
+this file is to guide you through setting up, tearing down, and working with virtual environments.
+venv is a place-holder name for any virtual environment you wish to create.
+
+
 HOW TO ADD VENV KERNEL TO JUPYTER ENV
 https://stackoverflow.com/questions/33496350/execute-python-script-within-jupyter-notebook-using-a-specific-virtualenv
+$ python -m ipykernel install --user --name venv --display-name "venv"
 
 HOW TO REMOVE VENV KERNEL FROM JUPYTER ENV
 https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook
+
+CLEAR CACHE FROM ENVIRONMENT (ANY / VENV)
+https://stackoverflow.com/questions/9510474/removing-pips-cache/31807659#31807659
+$ pip --no-cache-dir install {}
+
+CALL VIRTUALENVIRONMENT IN WINDOWS 10 (USE COMMAND PROMPT, NOT POWERSHELL)
+https://conda.io/projects/conda/en/latest/user-guide/troubleshooting.html#path-error
+$ set “PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\”
+$ call C:\Users\Viz2\Anaconda3\Scripts\activate venv
