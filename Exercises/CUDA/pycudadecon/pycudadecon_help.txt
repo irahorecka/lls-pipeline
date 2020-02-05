@@ -1,0 +1,2 @@
+PYCUDADECON, A PYTHON WRAPPER FOR THE CUDADECON LIBRARY
+https://github.com/tlambert03/pycudadecon

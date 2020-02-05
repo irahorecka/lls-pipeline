@@ -5,5 +5,5 @@ https://github.com/tlambert03/LLSpy
 2) in a command prompt configured to the correct conda virtual environment (e.g. napari_llspy):
 	$ conda install llspy
 3) make sure all dependencies for llspy are installed
-	e.g. spimagine (pip install spimagine)
+	e.g. spimagine (pip install spimagine) (conda install -c conda-forge spimagine)
 	see that you don't get a dll load failed response (DLL = dynamic-link library)
