@@ -1,0 +1,18 @@
+WORKING WITH CUPY WITH CUDA TOOLKIT V10.1
+	Install appropriate CUDA Toolkit V10.1
+	Restart computer
+	Open command prompt (Windows 10) and if you are working with a virtualenv + anaconda virtualenv:
+		$ workon venv_py
+		$ set path=""
+		$ call path venv_anaconda3
+
+	$ pip install cupy
+		if you get: error: Microsoft Visual C++ 14.1 is required. Get it with "Build Tools for Visual Studio": https://visualstudio.microsoft.com/downloads/
+		visit this link and download cpp build tools: https://www.scivision.co/python-windows-visual-c-14-required/
+			FOLLOW THE INSTRUCTIONS CAREFULLY...
+	if you are STILL receiving cpp 14.1 error, try this instead
+	$ pip install cupy-cuda101 (if you have CUDA toolkit 10.1)
+		this should work
+	Open python repl and type:
+		>>>import cupy
+	this should work!

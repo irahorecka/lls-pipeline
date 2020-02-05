@@ -16,23 +16,8 @@ try sample code provided by NVIDIA
 		use this path in the CUDA Toolkit Custom Dir: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2
 	NOTE: THE ABOVE EXAMPLE FAILED FOR CUDA TOOLKIT V10.2
 	      UNINSTALL V10.2 AND INSTALL 10.1
-	
-WORKING WITH CUPY WITH CUDA TOOLKIT V10.1
-	Install appropriate CUDA Toolkit V10.1
-	Restart computer
-	Open command prompt (Windows 10) and if you are working with a virtualenv + anaconda virtualenv:
-		$ workon venv_py
-		$ set path=""
-		$ call path venv_anaconda3
-	$ pip install cupy
-		if you get: error: Microsoft Visual C++ 14.1 is required. Get it with "Build Tools for Visual Studio": https://visualstudio.microsoft.com/downloads/
-		visit this link and download cpp build tools: https://www.scivision.co/python-windows-visual-c-14-required/
-			FOLLOW THE INSTRUCTIONS CAREFULLY...
-	if you are STILL receiving cpp 14.1 error, try this instead
-	$ pip install cupy-cuda101 (if you have CUDA toolkit 10.1)
-		this should work
-	Open python repl and type:
-		>>>import cupy
-	this should work!
+
+Supposedly you can conda install the CUDA toolkit, though I have not tried.
+	$ conda install cudatoolkit=10.1	
 
 

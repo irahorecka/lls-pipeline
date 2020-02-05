@@ -1,0 +1,39 @@
+PyOpenCL gives you easy, Pythonic access to the OpenCL parallel computation API.
+
+What is OpenCL
+	OpenCL™ (Open Computing Language) is the open, royalty-free standard for cross-platform, parallel programming of 
+	diverse processors found in personal computers, servers, mobile devices and embedded platforms. OpenCL greatly improves
+	the speed and responsiveness of a wide spectrum of applications in numerous market categories including gaming and 
+	entertainment titles, scientific and medical software, professional creative tools, vision processing, and neural
+	network training and inferencing.
+
+
+INSTALLING PYOPENCL ON WINDOWS 10 (2020-02-05)
+pyopencl [CRITICAL LIB]
+		- Make sure pybind11, mako are installed (use pip)
+		- For Windows 10, import from wheel, make sure to choose the right Python version.
+		- Check bit no. for Windows 10 via a python repl like this:
+		>>> import platform
+		>>> platform.architecture()
+		('64bit', 'WindowsPE')
+		- Go to https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopencl to download the appropriate wheel
+		- For Viz2, we are running python 3.7.6, with a 64bit OS, therefore we would download:
+		pyopencl-2019.1.2+cl21-cp37-cp37m-win_amd64.whl
+			notice the cp37, this corresponds to Cpython 3.7
+		- Then, pip install directly from the downloaded wheel like this:
+		$ pip install "C:\Users\Viz2\Downloads\pyopencl-2019.1.2+cl21-cp37-cp37m-win_amd64.whl"
+
+		- Test for successful installation:
+		>>> import pyopencl
+		- Unfortunately, I receive this for the time being:
+		ImportError: DLL load failed: The specified procedure could not be found.
+
+		- You can also try conda install -c conda-forge pyopencl
+			still ImportError
+		- for AMP APP SDK 3.0 setup help
+		- file:///C:/Program%20Files%20(x86)/AMD%20APP%20SDK/3.0/docs/AMD_APP_SDK_GettingStartedGuide.pdf
+			can build sample applications for OpenCL, but no luck in pyopencl import.
+
+		UPDATE:
+		- no luck troubleshooting ImportError. Followed wiki to no avail (below):
+			https://wiki.tiker.net/PyOpenCL/Installation/Windows

@@ -21,3 +21,4 @@ $ workon venv (e.g. napari)
 FOR ANACONDA VENV
 $ set “PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\”
 $ call C:\Users\Viz2\Anaconda3\Scripts\activate venv (e.g. napari_llspy)
+

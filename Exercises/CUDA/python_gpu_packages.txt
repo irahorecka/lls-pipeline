@@ -1,0 +1,5 @@
+GPU packages for Python
+	- cupy
+	- numba
+	- pyopencl [CRITICAL LIB] - trouble installing on Windows 10.
+	- gputools
