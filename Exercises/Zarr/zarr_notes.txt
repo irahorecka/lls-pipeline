@@ -29,6 +29,10 @@ ARTICLES DISCUSSING TIFF TO ZARR
 4!!) Load Large Image Data with Dask Array
 	https://blog.dask.org/2019/06/20/load-image-data
 
+GENERAL NOTES
+- If you want to run a multi-processing task, you must run it in a .py file.
+  Make sure to call the script and allocate tasks via multiprocessing in the conditional if __name__ == '__main__':
+
 
 
 
