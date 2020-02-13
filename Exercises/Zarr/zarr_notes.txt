@@ -32,6 +32,9 @@ ARTICLES DISCUSSING TIFF TO ZARR
 GENERAL NOTES
 - If you want to run a multi-processing task, you must run it in a .py file.
   Make sure to call the script and allocate tasks via multiprocessing in the conditional if __name__ == '__main__':
+- Preferrably use Dask distributed to run parallel tasks (i.e. write to zarr files)
+	- for this, use larger chunk size. allocating tasks to different workers has heavy overhead penalty.
+	- e.g. prefer a 64 x 2 block (128 chunks) rather than 64 x 4 block (256 chunks) for writing.
 
 
 
