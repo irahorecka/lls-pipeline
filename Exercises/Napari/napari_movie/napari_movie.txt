@@ -1,0 +1,17 @@
+NAPARI MOVIE
+https://github.com/guiwitz/naparimovie
+
+Napari movie (naparimovie) provides the possibility of creating movies (mp4 or gif) from the napari GUI visualization.
+Currently, once you are satisfied with editing your image on napari GUI, you will go to the first frame (ndisplay=3)
+and click 'F'. Then, you will mouse to the last frame in the napari GUI and again click 'F'. DO NOT click 'F' more than
+twice (one in the beginning, one in the end), or an exception will be thrown.
+Then, you will call a function (movie.make_gif('example.gif')) from the the Movie instansiation to make your movie.
+
+Overall, this is a very useful library in saving napari image files.
+
+Hack ideas for naparimovie to be implemented with
+ the LLS_Pipeline:
+- Remove key bindings ('F', etc.)
+- Allow easy text input or JSON input for image manipulation
+- Allow dask.distributed or multiprocessing of images to movie if possible
+- Create an easier method to generating gifs movies via napari (long shot).
