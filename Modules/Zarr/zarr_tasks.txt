@@ -1,0 +1,5 @@
+HOW TO USE ZARR AND DASK ARRAY CHUNKING
+- you want to first focus on a single file. chunk a single .tif file first into tiny little bits.
+  Gokul mentioned a linear pathway downwards, meaning you want to have diminishing resolution if possible (124, 62, 36).
+  Chunk one file into tiny little chunks, though I am not sure how to go about doing this....
+
