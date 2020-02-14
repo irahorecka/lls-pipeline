@@ -69,16 +69,21 @@ def block_regex_tif(tif_filepath: str, lazy_arrays: list) -> dask.array:
     return b
 
 
-if __name__ == '__main__':
-    filenames = get_filenames(GPU)
-    sample = imread_tiff(GPU, num_folder=2)
-    lazy_arrays = get_lazy_arrays(filenames, sample)
-    b = block_regex_tif(filenames, lazy_arrays)
-
+def parallel_write(filename: str, darray: dask.array) -> None:
+    """Distribute Zarr writing task to workers using dask.
+    Input filename should have extension .zarr"""
     client = Client()
-    out = b.to_zarr("test_mydata.zarr", compressor=Blosc(cname='zstd', clevel=3, shuffle=Blosc.BITSHUFFLE))
+    out = darray.to_zarr(filename, compressor=Blosc(cname='zstd', clevel=3, shuffle=Blosc.BITSHUFFLE))
     try:
         progress(client)
         fut = client.compute(out)
     except BrokenPipeError:
         print('Process complete (likely)...')
+
+
+if __name__ == '__main__':
+    filenames = get_filenames(GPU)
+    sample = imread_tiff(GPU, num_folder=2)
+    lazy_arrays = get_lazy_arrays(filenames, sample)
+    b = block_regex_tif(filenames, lazy_arrays)
+    parallel_write('test_mydata.zarr', b)

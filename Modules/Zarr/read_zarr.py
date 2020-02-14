@@ -24,7 +24,8 @@ def retrieve_zarr(zarr_filepath: str, data_type: str='dask'):
     elif data_type == 'zarr':
         return to_intermediate(zarr_filepath)
     else:
-        raise ValueError("Please put in a valid data_type kwarg.")
+        raise ValueError("Please put in a valid argument for data_type ('dask' or 'zarr').")
+
 
 if __name__ == '__main__':
     zarr_filepath = r'C:\Users\Viz2\python_anaconda3\UCB ABC\git_clones\LLS_Pipeline\Exercises\Zarr\test_mydata.zarr'
