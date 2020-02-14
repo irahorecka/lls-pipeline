@@ -1,0 +1,6 @@
+IDEAS FOR USING NAPARI AS A PIPELINE FOR IMAGE ANALYSIS::
+- allow default settings to be inputed via command line arguments
+	- such as set contrast, color pallette, 3D, etc all via JSON format
+- allow movie to be generated automatically
+	- simplest way to do this is to simply make a gif from the first image to the last.
+	- propose simpler ways to make a JSON format for angle adjustments, etc.
