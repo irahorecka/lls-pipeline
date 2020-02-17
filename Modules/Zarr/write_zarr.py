@@ -73,9 +73,10 @@ def parallel_write(filename: str, darray: dask.array) -> None:
     """Distribute Zarr writing task to workers using dask.
     Input filename should have extension .zarr"""
     client = Client()
-    out = darray.to_zarr(filename, compressor=Blosc(cname='zstd', clevel=3, shuffle=Blosc.BITSHUFFLE))
+    out = darray.to_zarr(filename, compressor=Blosc(cname='zstd', clevel=3, shuffle=Blosc.BITSHUFFLE),
+        compute=False)
     try:
-        progress(client)
+        progress(client) #  I believe this is for visualization purpose.
         fut = client.compute(out)
     except BrokenPipeError:
         print('Process complete (likely)...')

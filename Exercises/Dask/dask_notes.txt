@@ -1,0 +1,14 @@
+NOTES FOR USING DASK ARRAYS AND WORKING WITH ITS CONCURRENCY FEATURES
+
+For interesting and recent posts regarding Dask from the core developer (Matthew Rocklin), look into his blog:
+	https://matthewrocklin.com/blog/
+
+For use of concurrency in tasks such as writing a dask array to zarr files, look into this stackoverflow post (by Martin Durant):
+	https://stackoverflow.com/questions/59272474/asynchronous-xarray-writing-to-zarr
+
+To look at best practices using chunks in Dask, look at these posts:
+	https://docs.dask.org/en/latest/array-chunks.html
+	https://docs.dask.org/en/latest/array-best-practices.html
+
+Looking into futures with Dask:
+`	https://docs.dask.org/en/latest/futures.html
