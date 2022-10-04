@@ -1,4 +1,4 @@
-# LLS_Pipeline
+# lls-pipeline
 ## Introduction
 A post-processing pipeline for lattice light-sheet microscopy images.
 
